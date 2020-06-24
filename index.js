@@ -90,6 +90,8 @@ class ADCPlatform {
   didFinishLaunching() {
     this.listDevices()
       .then(res => {
+		  
+		  console.log(res);
 
         for (var device in res) {
           if (device === 'partitions' && typeof res[device][0] == 'undefined') {
