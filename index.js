@@ -91,8 +91,6 @@ class ADCPlatform {
     this.listDevices()
       .then(res => {
 		  
-		this.log(res)
-
         for (var device in res) {
           if (device === 'partitions' && typeof res[device][0] == 'undefined') {
             // throw error if no partition, ideally this should never occur
